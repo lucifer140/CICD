@@ -21,7 +21,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: docker build and push
       run: |
-       docker build -t 3iamlucifer12/cicdnode -f Dockerfile
+       docker build -t 3iamlucifer12/cicdnode -f Dockerfile .
        docker push 3iamlucifer12/cicdnode
         
 
