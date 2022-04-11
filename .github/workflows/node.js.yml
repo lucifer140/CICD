@@ -25,9 +25,10 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-    - name: docker build and run
+    - name: docker build and run and push
       run: |
        docker build -t 3iamlucifer12/cicdnode -f Dockerfile .
+       docker run -d -p 9999:8888 3iamlucifer12/cicdnode
        docker push 3iamlucifer12/cicdnode
        
         
