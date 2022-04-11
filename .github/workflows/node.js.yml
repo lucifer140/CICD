@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  testapplication:
+  cicd:
     runs-on: ubuntu-latest
 
     strategy:
