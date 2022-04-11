@@ -19,11 +19,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: docker build and push
+    - name: docker build and run
       run: |
        docker build -t 3iamlucifer12/cicdnode -f Dockerfile .
-       sudo docker login -u $USERNAME -p $PASSWORD
-       docker push 3iamlucifer12/cicdnode
+       docker run -d -it -p 9000:8000 3iamlucifer12/cicdnode
         
 
      
