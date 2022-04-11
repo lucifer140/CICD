@@ -1,4 +1,4 @@
-FROM node:its alpine 3.15
+FROM node:its-alpine3.15
 
 # Create app directory
 WORKDIR /app
