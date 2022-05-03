@@ -5,8 +5,6 @@ pipeline {
        stage('build') {
             steps {
                 sh '''
-                cd CICD
-                whoami
                docker build -t jenks -f Dockerfile .
                docker images
                '''
