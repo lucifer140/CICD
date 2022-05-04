@@ -4,7 +4,7 @@ pipeline {
     stages {
        stage('build') {
            when {
-               branch "develop"
+               branch "next"
            }
             steps {
                 sh '''
