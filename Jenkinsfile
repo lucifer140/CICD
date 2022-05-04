@@ -10,13 +10,6 @@ pipeline {
                '''
             }
         }
-        stage('deploy') {
-            steps {
-                sh '''
-                docker run -d --name junkeys -p 7777:8080 jenks
-                '''
-            }
-        }
         
     }
 }
